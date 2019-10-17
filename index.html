@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377191-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115377191-5');
+</script>
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" href="assets/css/vendors.css" />
@@ -24,7 +32,10 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
-							<a href="#r81">Release R81</a>
+							<a href="#2019-11">Release 2019-11</a>
+							</li>
+							<li class="active">
+							<a href="#2019-09">Release 2019-09</a>
 							</li>
 					</ul>
 				</div>
@@ -51,27 +62,87 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
-							<a href="#r81">Release R81</a>
+							<a href="#2019-11">Release 2019-11</a>
+							</li>
+							<li>
+							<a href="#2019-09">Release 2019-09</a>
 							</li>
 					</ul>
 				</div>				
-<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6"><p>Latest technical features, modifications and enhancements concerning the e-payment solution Saferpay from Worldline/SIX Payment Services.</p></div><div class="col-md-6">
+<section id="intro"><h1><a name="intro"></a>Introduction</h1><div class="row"><div class="col-md-6">
+<p>Latest technical features, modifications and enhancements concerning the e-payment solution Saferpay from Worldline/SIX Payment Services.</p></div><div class="col-md-6">
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
-	<section id="r81"><h1><a name="Release R81"></a>Release R81</h1><div class="row"><div class="col-md-6">
+	
+<section id="2019-11"><h1><a name="Release 2019-11"></a>Release 2019-11</h1><div class="row"><div class="col-md-6">
 		
 		<p>
 			<div class="info">
   <p>
-  	<strong>Release Date: 17/09/2019</strong><br/>Available on Sandbox: 10/08/2019</p>
+  	<strong>Release Date: 2019-11-19</strong><br/>Available on Sandbox: 2019-11-05</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.13.0.0.20190917" target="_blank">Version 1.14</a>
+	</p>
+		<h2>New Feature: Hosted Fields</h2>
+	<p>
+	Provides you completly customizable fields to integrate into your step-by-step, on-page checkout or wherever you might need a PCI certified card input
+	</p>
+Fields
+	<ul>
+	<li>PAN</li>
+	<li>CVC</li>
+	<li>Expiration date</li>		
+</ul>
+<a href="https://google.ch" target="_blank">LINK TO BUSINESS POST?</a>
+	</p>
+			<h2>New Feature: Secure PayGate API</h2>
+			<p>A new API call provides payment links for a seamless Secure PayGate integration into 3rd party solutions</p>
+			<a href="https://google.ch" target="_blank">LINK TO BUSINESS POST?</a>
+<h2>New Feature: TWINT User on File</h2>
+	<p>Sache</p>
+<a href="https://google.ch" target="_blank">LINK TO BUSINESS POST?</a>
+<h2>Backoffice improvements</h2>
+	<ul>
+	<li>Added a new pop-up to generate basic authentication API-Credentials for a better user experience</li>
+	<li>Added a detailed transaction points overview</li>
+	<li>Added a feedback collector form</li>		
+</ul>
+<h2>Secure PayGate Improvements</h2>
+<ul>
+	<li>Added the following new fields to configure an Secure PayGate template
+		<ul>
+			<li>BCC</li>
+			<li>Reply to</li>
+			<li>Language</li>
+			<li>Payment confirmation for merchants (multiple emails ready)</li>
+		</ul>
+		</li>
+			<li>Added the following new field to configure an Secure PayGate offer
+		<ul>
+			<li>Payment confirmation for merchants (multiple emails ready)</li>
+		</ul>
+		</li>
+	<li>Added a dropdown which allows to link a customized payment page configuration to an Secure PayGate template and offer</li>
+	<li>Added the option to customize the payment confirmation email to the customer</li>
+	<li>Added feature to style the offer email according to the Payment Page configuration</li>	
+</ul>
+</section>	
+	<section id="2019-09"><h1><a name="2019-09"></a>Release 2019-09</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 2019-09-17</strong><br/>Available on Sandbox: 2019-09-10</p>
 </div></p>
 
 <p>
 	<h2>JSON API</h2>
 	<a href="http://saferpay.github.io/jsonapi/#v1.13.0.0.20190917" target="_blank">Version 1.13</a>
 	</p>
-	<p>
 	<h2>Added a third gender option</h2>
 	<p>
 	German law introduced a third gender "diverse"
@@ -80,7 +151,7 @@ JSON API
 	<ul>
 	<li>Added value <code>diverse</code> for the gender field in payment initialization and authorization requests and responses</li>
 </ul>
-Payment Page, Secure Payment Gateway & emails
+Payment Page, Secure PayGate & emails
 <ul>
 	<li>Added third "diverse" gender in the address forms and offers</li>
 	<li>Adjusted the salutations in emails</li>
@@ -114,7 +185,7 @@ Backoffice
 	<li>Added a setting to enable whether non-DE IBAN are accepted or not</li>
 </ul>
 	</p>
-<p><h2>Secure Pay Gate Improvements</h2>
+<p><h2>Secure PayGate Improvements</h2>
 	<ul>
 	<li>Added authorization type <code>Final authorization with auto-capture</code></li>
 		<li>Removed global settings "Register automatically"</li>
@@ -144,9 +215,7 @@ JSON API
 </ul>
 	</p>
 	</div>
-
-<div class="row">
-	</div>
+</section>
 
 	<div class="scroll-top-wrapper">
 		<a href="#top" class="scroll-top-inner" onclick="$('html,body').animate({ scrollTop: 0 }, 'slow'); return false;">
