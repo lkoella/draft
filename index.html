@@ -100,6 +100,38 @@
 	<h2>JSON API</h2>
 	<a href="http://saferpay.github.io/jsonapi/#v1.16.0.0.20200317" target="_blank">Version 1.16</a>
 	</p>
+	<h2>SCA Exemptions</h2>
+<ul>
+	<li>Added flags in JSON API for merchants to request SCA Exemptions</li>
+	<li>Added support of "soft decline": decline from issuer with a request for Strong Customer Authentication</li>
+</ul>
+		<p>
+			<div class="warning">
+  <p>
+  SCA Exemptions are only possible wit acquiring from SIX Payment Services requiring a prio agreement. The functionality requesting SCA exemptions from merchant side does not have yet a sounding support in the payment eco-system. We expect full support of it's functionality by all necessary players by Q4 2020.
+ 	</p>
+</div></p>
+	<h2>PSD2 compliancy: card registration and alias management</h2>
+<ul>
+	<li>Added authentication flow in card registration</li>
+	<li>Added authentication result information in <code>Alias AssertInsert</code></li>
+	<li>Added authentication result from alias storing in the Saferpay Backoffice</li>
+	<li>Added flags to force Strong Customer Authentication with the following values</li>
+		<ul>
+			<li>force</li>
+			<li>avoid</li>
+			<li>no preference</li>
+		</ul>
+	<li>Added automatic enforcement of Strong Customer Authentication in case of initial recurring or installment transaction is in scope of PSD2</li>
+</ul>
+		<p>
+			<div class="warning">
+  <p>
+  The authentication for card registration is only possible with acquiring from SIX Payment Services [Mastercard and VISA] and 3DS v2 capable issuers.
+ 	</p>
+</div></p>
+<h2>Transaction Point Table</h2>
+<p>A new page is added in the Saferpay Backoffice with an overview of the transaction points usage</p>
 <h2>Saferpay Fields Improvements</h2>
 <ul>
 	<li>Added support for customers using 3rd-party cookies</li>
