@@ -108,7 +108,7 @@
 		<p>
 			<div class="warning">
   <p>
-SCA Exemptions are only possible with aquiring from SIX Payment Services and requires an additional acquiring agreement.
+The use of SCA Exemptions is currently supported for Mastercard and Visa transactions that are processed by SIX Payment Services and requires an updated acquiring agreement.
  	</p>
 </div></p>
 		<p>
@@ -119,8 +119,8 @@ The functionality requesting SCA exemptions from merchant side does not have yet
 </div></p>
 	<h2>PSD2 compliancy: card registration and alias management</h2>
 <ul>
-	<li>Added authentication flow in card registration</li>
-	<li>Added authentication result information in <code>Alias AssertInsert</code></li>
+	<li>Added authentication flow in card registration <code>Alias/Insert</code></li>
+	<li>Added authentication result information in <code>Alias/AssertInsert</code></li>
 	<li>Added authentication result from alias storing in the Saferpay Backoffice</li>
 	<li>Added flags to force Strong Customer Authentication with the following values</li>
 		<ul>
@@ -136,7 +136,7 @@ The functionality requesting SCA exemptions from merchant side does not have yet
   The authentication for card registration is only possible with acquiring from SIX Payment Services [Mastercard and VISA] and 3DS v2 capable issuers.
  	</p>
 </div></p>
-<h2>Transaction Point Table</h2>
+<h2>Transaction Points Overview in the Saferpay Backoffice</h2>
 <p>A new page is added in the Saferpay Backoffice with an overview of the transaction points usage</p>
 <h2>Saferpay Fields Improvements</h2>
 <ul>
@@ -149,8 +149,7 @@ The functionality requesting SCA exemptions from merchant side does not have yet
 	<li>Bad case</li>
 	<li>Canceled by customer</li>
 </ul>
-<h2>Optional CVC enforcement for alias transactions</h2>
-<p>Using the new option in Transaction Initialize TO BE REPLACED, will enforce a new entry of the CVC from the customer when performing an alias transaction</p>
+<p>Available on our <a href="https://test.saferpay.com/BO/Welcome" target="_blank">sandbox</a></p>
 </section>
 <section id="2020-01"><h1><a name="Release 2020-01"></a>Release 2020-01</h1><div class="row"><div class="col-md-6">
 		
