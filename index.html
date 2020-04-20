@@ -33,6 +33,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2020-05">Release 2020-05</a>
+							</li>
+							<li class="active">
 							<a href="#2020-03">Release 2020-03</a>
 							</li>
 							<li class="active">
@@ -45,7 +48,6 @@
 							<a href="#2019-09">Release 2019-09</a>
 							</li>
 					</ul>
-					<img src="saferpay_retro.jpg" alt="Saferpay" width="200">
 				</div>
 			</nav>
 
@@ -70,6 +72,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2020-05">Release 2020-05</a>
+							</li>
+							<li>
 							<a href="#2020-03">Release 2020-03</a>
 							</li>
 							<li>
@@ -90,7 +95,41 @@
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
-	
+	<section id="2020-05"><h1><a name="Release 2020-05"></a>Release 2020-05</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 2020-05-12</strong><br/>Available on Sandbox: 2020-04-28</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.17.0.0.20200512" target="_blank">Version 1.17</a>
+	</p>
+	<h2>New Feature: Alias based transactions through the Saferpay Backoffice</h2>
+	<p>This new feature allows you to simply open an alias in the Saferpay Backoffice and trigger a reservation or refund</p>
+	<h2>New Feature: Optional CVC enforcement for alias transactions</h2>
+	<p>Using the new option in Transaction Initialize, will enforce a new entry of the CVC from the customer when performing an alias transaction</p>
+	<h2>Saferpay Backoffice Improvements</h2>
+<ul>
+	<li>Added a new column "Wallets" in the Journal and Journal Export to identify if credit-card transactions were initialized through a wallet</li>
+	<li>Added referenced refunds to the transaction tree for a visual overview</li>
+	<li>Added a warning message if the accumulated refund amount exceeds the captured one</li>
+</ul>
+	<h2>Card registration with Saferpay Fields</h2>
+	<p>Added support for card registration with or without performing a transaction for the Saferpay Fields</p>
+	<h2>Harmonization of the Hosted Entry Form and Payment Page with the Saferpay Fields components</h2>
+	<p>All payment forms now use the new form components from the Saferpay Fields. This provides the possibility for a consistent look n' feel and styling.</p>
+	<h2>Mastercard Issuer Installments</h2>
+	<p>Allowing customers to choose an installment plan from it's Mastercard issuer</p>
+		<p>
+			<div class="warning">
+  <p>Available in the mandated countries: Roamania, Hungary, UK, Slovenia, Czech Republik and Poland with SIX Payment Services Acquiring
+ 	</p>
+</div>
+</p>
+	</section>
 <section id="2020-03"><h1><a name="Release 2020-03"></a>Release 2020-03</h1><div class="row"><div class="col-md-6">
 		
 		<p>
@@ -103,15 +142,15 @@
 	<h2>JSON API</h2>
 	<a href="http://saferpay.github.io/jsonapi/#v1.16.0.0.20200317" target="_blank">Version 1.16</a>
 	</p>
-	<h2>SCA Exemptions</h2>
+	<h2>Strong Customer Authentication: Exemptions</h2>
 <ul>
-	<li>Added flags in JSON API for merchants to request SCA Exemptions</li>
+	<li>Added flags in JSON API for merchants to request SCA exemptions</li>
 	<li>Added support of "soft decline": decline from issuer with a request for Strong Customer Authentication</li>
 </ul>
 		<p>
 			<div class="warning">
   <p>
-The use of SCA Exemptions is currently supported for Mastercard and Visa transactions that are processed by SIX Payment Services and requires an updated acquiring agreement.
+The use of SCA Exemptions is currently supported for Mastercard and Visa transactions that are processed by Worldline/SIX Payment Services and requires an updated acquiring agreement.
  	</p>
 </div></p>
 		<p>
@@ -120,7 +159,7 @@ The use of SCA Exemptions is currently supported for Mastercard and Visa transac
 The functionality requesting SCA exemptions from merchant side does not have yet a sounding support in the payment eco-system. We expect full support of it's functionality by all necessary players by Q4 2020.
  	</p>
 </div></p>
-	<h2>PSD2 compliancy: card registration and alias management</h2>
+	<h2>PSD2 Compliancy: Card Registration and Alias Management</h2>
 <ul>
 	<li>Added authentication flow in card registration <code>Alias/Insert</code></li>
 	<li>Added authentication result information in <code>Alias/AssertInsert</code></li>
@@ -136,7 +175,7 @@ The functionality requesting SCA exemptions from merchant side does not have yet
 		<p>
 			<div class="warning">
   <p>
-  The authentication for card registration is only possible with acquiring from SIX Payment Services [Mastercard and VISA] and 3DS v2 capable issuers.
+  The authentication for card registration is only possible with acquiring from Worldline/SIX Payment Services [Mastercard and Visa] and 3-D Secure 2 capable issuers.
  	</p>
 </div></p>
 <h2>Transaction Points Overview in the Saferpay Backoffice</h2>
@@ -148,11 +187,11 @@ The functionality requesting SCA exemptions from merchant side does not have yet
 <h2>PostFinance Card & E-Finance Simulator</h2>
 <p>A new simulator with the following use cases for PaymentPage Initialize/Assert and Secure Card Data</p>
 <ul>
-	<li>Good case</li>
-	<li>Bad case</li>
+	<li>Successful authentication</li>
+	<li>Failed authentication</li>
 	<li>Canceled by customer</li>
 </ul>
-<p>Available on our <a href="https://test.saferpay.com/BO/Welcome" target="_blank">sandbox</a></p>
+<p>Available on our <a href="https://test.saferpay.com/BO/Welcome" target="_blank">Sandbox</a></p>
 </section>
 <section id="2020-01"><h1><a name="Release 2020-01"></a>Release 2020-01</h1><div class="row"><div class="col-md-6">
 		
