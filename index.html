@@ -33,6 +33,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li class="active">
+							<a href="#2020-07">Release 2020-07</a>
+							</li>
+							<li class="active">
 							<a href="#2020-05">Release 2020-05</a>
 							</li>
 							<li class="active">
@@ -72,6 +75,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2020-07">Release 2020-07</a>
+							</li>
+							<li>
 							<a href="#2020-05">Release 2020-05</a>
 							</li>
 							<li>
@@ -95,6 +101,40 @@
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
+<section id="2020-07"><h1><a name="Release 2020-07"></a>Release 2020-07</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 2020-07-14</strong><br/>Available on Sandbox: 2020-06-30</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.18.0.0.20200714" target="_blank">Version 1.18</a>
+	</p>
+	<h2>Saferpay Fields Improvements</h2>
+	<ul>
+	<li>Server-side bin-range detection</li>
+	<li>CVC form enable/disable according to brand requirements</li>
+<li>Pre-selection for all supported brands</li>
+<li>MyOne and BonusCard support</li>
+</ul>
+	<h2>Saferpay Backoffice Improvements</h2>
+	<ul>
+	<li>Implementation of the Saferpay Fields expiry date form</li>
+	<li>Warning if the refund amount exeeds the commulated captured amount</li>
+	</ul>
+	<h2>Remove expiry date check at Saferpay</h2>
+<p>Saferpay now accepts cards with all expiry dates and processes them according to the issuer.</p>
+	<ul>
+	<li>API calls</li>
+	<li>Saferpay Backoffice with warning</li>
+	</ul>
+<h2>PayPal API Lifecycle</h2>
+<p>Saferpay implemented the newest API from PayPal and will start with the merchant migration after the release</p>
+</p>
+	</section>
 	<section id="2020-05"><h1><a name="Release 2020-05"></a>Release 2020-05</h1><div class="row"><div class="col-md-6">
 		
 		<p>
@@ -132,7 +172,6 @@
 <ul>
 	<li>Added a new column "Wallets" in the Journal and Journal Export to identify if credit card transactions were initialized through a wallet</li>
 	<li>Added referenced refunds to the transaction tree for a visual overview</li>
-	<li>Added a warning message if the accumulated refund amount exceeds the captured one</li>
 </ul>
 	<h2>New Feature: Alias based transactions through the Saferpay Backoffice</h2>
 	<p>This new feature allows you to simply open an alias in the Saferpay Backoffice and trigger a reservation or refund.</p>
