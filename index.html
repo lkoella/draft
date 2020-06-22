@@ -114,8 +114,8 @@
 	<a href="http://saferpay.github.io/jsonapi/#v1.18.0.0.20200714" target="_blank">Version 1.18</a>
 	</p>
 	<h2>Support of Payer ID</h2>
-<p>You can now provide a payer id to link transactions and stored aliases to your customer by providing a unique id. The id will help you filter, search and analyze transactions and aliases linked to your native system like CRM.</p>
-	<p>Saferpay will extend this new feature ongoing. In this release we can already provide:</p>
+<p>You can now provide a payer ID to link transactions and stored aliases to your client by providing a unique ID. The Payer ID will help you filter, search and analyze transactions and aliases linked to your native system like CRM.</p>
+	<p>Saferpay is extending this functionality step by step, so far we've implemented:</p>
 	<ul>
 	<li>Authorize/Direct API call</li>
 	<li>Journal search and export</li>
@@ -123,23 +123,21 @@
 	</ul>
 	<h2>Saferpay Fields Improvements</h2>
 	<ul>
-	<li>Server-side bin-range detection</li>
-	<li>CVC form enable/disable according to brand requirements</li>
-<li>Pre-selection for all supported brands</li>
-<li>MyOne and BonusCard support</li>
+	<li>Server-side BIN range detection</li>
+	<li>CVC input enable/disable according to card scheme requirements</li>
 </ul>
 	<h2>Saferpay Backoffice Improvements</h2>
 	<ul>
-	<li>Implementation of the Saferpay Fields expiry date form</li>
-	<li>Warning if the refund amount exeeds the commulated captured amount</li>
+	<li>The expiry date drop-down fields were replaced with text input fields as used with Saferpay Fields</li>
+	<li>A warning is shown if the refund amount exceeds the cumulated captured amount.</li>
 	</ul>
 	<h2>Saferpay Secure PayGate Card Registration</h2>
 <p>You can now store a card in the Saferpay Secure Card Data by sending a payment link created in the Backoffice or via API</p>
-	<h2>Remove expiry date check at Saferpay</h2>
-<p>Saferpay now accepts cards with all expiry dates and processes them according to the issuer.</p>
+	<h2>Support for Expired Cards</h2>
+<p>Saferpay now accepts cards with all expiry dates and processes them according to the response of the issuer.</p>
 	<ul>
-	<li>API calls</li>
-	<li>Saferpay Backoffice with warning</li>
+	<li>An expired card will no longer be refused in JSON API calls</li>
+	<li>Entering an expired card will show a warning in Saferpay Backoffice but will not be refused</li>
 	</ul>
 
 </p>
