@@ -2,14 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115377191-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-115377191-5');
-</script>
 	<meta charset="utf-8">
 
 	<link rel="stylesheet" href="assets/css/vendors.css" />
@@ -31,6 +23,9 @@
 					<ul class="nav">
 							<li class="active">
 							<a href="#intro">Introduction</a>
+							</li>
+							<li class="active">
+							<a href="#2020-09">Release 2020-09</a>
 							</li>
 							<li class="active">
 							<a href="#2020-07">Release 2020-07</a>
@@ -75,6 +70,9 @@
 							<a href="#intro">Introduction</a>
 							</li>
 							<li>
+							<a href="#2020-09">Release 2020-09</a>
+							</li>
+							<li>
 							<a href="#2020-07">Release 2020-07</a>
 							</li>
 							<li>
@@ -101,6 +99,33 @@
 <strong>JSON API</strong><br/><a target="_blank" href="http://saferpay.github.io/jsonapi/">Saferpay JSON API Spec</a><br>
 <a target="_blank" href="http://saferpay.github.io/jsonapi/#changelog">Saferpay JSON API Changelog</a>
 </div></div><div class="row"><div class="col-md-6"></div></div></section>
+<section id="2020-09"><h1><a name="Release 2020-09"></a>Release 2020-09</h1><div class="row"><div class="col-md-6">
+		
+		<p>
+			<div class="info">
+  <p>
+  	<strong>Release Date: 2020-09-15</strong><br/>Available on Sandbox: 2020-09-01</p>
+</div></p>
+
+<p>
+	<h2>JSON API</h2>
+	<a href="http://saferpay.github.io/jsonapi/#v1.19.0.0.20200915" target="_blank">Version 1.19</a>
+	</p>
+	<h2>Fraud Prevention Enterprise</h2>
+		<p>Saferpay extends Fraud Prevention Module with additional features</p>
+		<ul>
+			<li>Fraud checks can be activated/deactivated for individual payment methods in Saferpay Backoffice</li>
+			<li>JSON API extended with additional data points for fraud check</li>
+			<li>Fraud check is supported for Bancontact payments</li>
+		</ul>
+	<h2>Saferpay Fields Improvements</h2>
+	<ul>
+		<li>The CVC form reacts to brand requirements regarding optionality and digits</li>
+		<li>Pre-selection for all supported brands</li>
+	</ul>
+	<h2>Saferpay Secure PayGate Improvement</h2>
+<p>The configuration of the payment button is now taken into the customers Secure PayGate email. E.g. if you configured the button in the Payment Page to "Donate" we will show the same text in the customers email.</p>
+	</section>
 <section id="2020-07"><h1><a name="Release 2020-07"></a>Release 2020-07</h1><div class="row"><div class="col-md-6">
 		
 		<p>
@@ -117,14 +142,14 @@
 <p>You can now provide a payer ID to link transactions and stored aliases to your client by providing a unique ID. The Payer ID will help you filter, search and analyze transactions and aliases linked to your native system like CRM.</p>
 	<p>Saferpay is extending this functionality step by step, so far we've implemented:</p>
 	<ul>
-	<li>Authorize/Direct API call</li>
-	<li>Journal search and export</li>
-	<li>Declined transactions and export</li>
+	<li>Transaction/AuthorizeDirect  API call</li>
+	<li>PaymentPage/Initialize API call (Transaction)</li>
+	<li>Transaction/Initialize API call (Transaction)</li>
+	<li>Journal search</li>
 	</ul>
 	<h2>Saferpay Fields Improvements</h2>
 	<ul>
 	<li>Server-side BIN range detection</li>
-	<li>CVC input enable/disable according to card scheme requirements</li>
 </ul>
 	<h2>Saferpay Backoffice Improvements</h2>
 	<ul>
@@ -132,8 +157,8 @@
 	<li>A warning is shown if the refund amount exceeds the cumulated captured amount.</li>
 	</ul>
 	<h2>Saferpay Secure PayGate Card Registration</h2>
-<p>You can now store a card in the Saferpay Secure Card Data by sending a payment link created in the Saferpay Backoffice or via API</p>
-	<h2>Support for Expired Cards</h2>
+<p>You can now store a card in the Saferpay Secure Card Data by sending a payment link created in the Saferpay Backoffice or via API.</p>
+	<h2>Switch check for Expired Cards to Issuer</h2>
 <p>Saferpay now accepts cards with all expiry dates and processes them according to the response of the issuer.</p>
 	<ul>
 	<li>An expired card will no longer be refused in JSON API calls</li>
